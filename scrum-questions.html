@@ -1,0 +1,34 @@
+
+
+
+
+
+
+<h1>Welcome to the Scrum quiz!</h1>
+
+<h2>Question 01</h2>
+<h3>Which name in the list is not credited with inventing Scrum?</h3>
+
+<p> <input type="radio" onclick="answerQuestion01('a')">Ken Schwaber</input> </p>
+<p> <input type="radio" onclick="answerQuestion01('b')">Jeff Sutherland</input> </p>
+<p> <input type="radio" onclick="answerQuestion01('c')">James Gosling</input> </p>
+
+<div id="result01"></div>
+<div id="explanation01" style="visibility:hidden">James Gosling invented Java, not Scrum.</div>
+
+<script>
+answerQuestion01 = function(usersAnswer){
+	var correctAnswer = 'c';
+	var outcome = correctAnswer == usersAnswer;
+	alert(outcome);
+	
+	if (outcome == true) {
+		document.getElementById('result01').innerHTML = "You got it right!";
+	} else {
+		document.getElementById('result01').innerHTML = "You got it wrong!";
+	}
+	document.getElementById('explanation01').style.visibility = 'visible';
+}
+</script>
+
+<hr/>
